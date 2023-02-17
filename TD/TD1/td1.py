@@ -8,8 +8,15 @@ def insertion_tableau(L, v, i):
     while a > i:
         L[a] = L[a-1]
         a-=1
-    L[i] =v
+    L[i] = v
 
+
+ """ def insertion_tableau():
+    temp = [v]
+    for j in range(i,len(L)):
+        temp.append(L.pop(j))
+    L += temp
+    return L """
 Liste = [0, 1, 2, 3]
 print(insertion_tableau(Liste, 42, 1))
 
@@ -20,7 +27,7 @@ supprime dans le tableau l'élément se trouvant à l'indice donné --> utilisat
 suppr 1 elemnt : fct L.pop() (sans argument) pour suppr dernière case."""
 
 def suppression_tableau(tab, i):
-    
+    taille = len(tab)
     tab.pop()
 
 

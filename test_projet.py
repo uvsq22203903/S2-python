@@ -1,5 +1,6 @@
-string = "san francisco san diego san antonio san jose"
+def chiffrement(char, key):
+    return chr(ord(char)+key)
 
-print(string.replace("san","San"))
-
-print(string.replace("san","San", 2))
+texte ="toto"
+cle = 3
+chiffrement(texte, cle)

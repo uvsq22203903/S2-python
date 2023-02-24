@@ -84,13 +84,13 @@ def ajouter_tableau(tab):
 tableau3 = [1, 54, 87, 69, 59, 32, 2, 4]
 print(ajouter_tableau(tableau3))
 
-def ajouter_tableau_trie(tab):
-    tab.append(420)
+def ajouter_tableau_trie(tab, v):
+    tab.append(v)
     tab.sort()
     return tab
 
 tableau4 = [1, 58, 65, 2, 47, 89]
-print(ajouter_tableau_trie(tableau4))
+print(ajouter_tableau_trie(tableau4, 420))
 
 """
 Question 3 : suppression d'un élément
@@ -115,3 +115,24 @@ def supprimer_tableau_trie(tab, id):
 tableau6 = [54, 78, 69, 12, 3]
 tableau6.sort()
 print(supprimer_tableau_trie(tableau6, 2))
+
+""" Exercice 5 - réarrangement de tableau
+Question 1 : Écrire une fonction `deplacer(T, k)` prenant en paramètre un tableau `T` et une valeur `k` et permutant les valeurs du tableau `T` 
+de manière à ce que toutes les valeurs strictement inférieures à `k` soient au début de tableau. """
+
+def deplacer(T, k):
+    T.sort()
+    ajouter_tableau_trie(T, k)
+    return T
+
+tableau7 = [8, 6, 2, 9, 78, 320]
+print(deplacer(tableau7, 42))
+
+"""Question 2 : Définir une fonction de tests unitaires de la fonction `deplacer`.
+utilisation assert """
+
+def test_deplacer():
+    assert deplacer([],5) == 5, "tableau vide"
+    assert deplacer()
+
+test_deplacer()

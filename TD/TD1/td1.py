@@ -68,9 +68,50 @@ tableau = [1, 2, 3, 4, 5, 6]
 print(minimum_tableau(tableau))
 
 def minimum_tableau_trie(tableau):
-    minimum = tableau[0]
-    return minimum
+    return tableau[0]
 
 tableau2 = [45, 47, 78, 96, 12]
 tableau2.sort()
 print(minimum_tableau_trie(tableau2))
+
+"""
+Question 2 : Ajout d'un élément"""
+
+def ajouter_tableau(tab):
+    tab.append(420)
+    return tab
+
+tableau3 = [1, 54, 87, 69, 59, 32, 2, 4]
+print(ajouter_tableau(tableau3))
+
+def ajouter_tableau_trie(tab):
+    tab.append(420)
+    tab.sort()
+    return tab
+
+tableau4 = [1, 58, 65, 2, 47, 89]
+print(ajouter_tableau_trie(tableau4))
+
+"""
+Question 3 : suppression d'un élément
+Définir la fonction `supprimer_tableau` prenant en paramètre un tableau et un indice `id` et supprimant dans le tableau la valeur d'indice `id`.
+On utilisera pour cela la fonction `.pop()` qui supprime la dernière case d'un tableau, mais pas la fonction `.pop(i)`"""
+
+def supprimer_tableau(tab, id):
+    a = []
+    for j in range(len(tab)):
+        a.append(tab[j])  # [tab[j]]
+        if j == id:
+            a.pop()
+    return a
+
+tableau5 = [1, 87, 56, 95, 102, 42]
+print(supprimer_tableau(tableau5, 4))
+
+def supprimer_tableau_trie(tab, id):
+    tab.pop(id)
+    return tableau2
+
+tableau6 = [54, 78, 69, 12, 3]
+tableau6.sort()
+print(supprimer_tableau_trie(tableau6, 2))
